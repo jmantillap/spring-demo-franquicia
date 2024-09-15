@@ -1,4 +1,4 @@
-package work.javiermantilla.appfranquicia.modules.franquicia.dto;
+package work.javiermantilla.appfranquicia.modules.sucursal.dto;
 
 import java.io.Serializable;
 
@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class FranquiciaUpdateDTO implements Serializable {
+public class SucursalUpdateDTO implements Serializable {
 
 	private static final long serialVersionUID = 6198043062145430662L;
 	
