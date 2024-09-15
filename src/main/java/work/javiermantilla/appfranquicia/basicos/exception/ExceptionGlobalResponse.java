@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.FieldError;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -83,6 +84,26 @@ public class ExceptionGlobalResponse {
 				FranquiciaConstants.MENSAJE_ERROR_VALIDACION_CAMPOS,HttpStatus.BAD_REQUEST);
 		return new ResponseEntity<>(result, HttpStatus.BAD_REQUEST);
 	}
+	
+	@ExceptionHandler(HttpRequestMethodNotSupportedException.class)
+	protected ResponseEntity<Object> handleHttpRequestMethodNotSupportedException(
+			HttpRequestMethodNotSupportedException ex) {
+		log.error(ex.getMessage(), ex);
+		result = new GenericResponseDTO(ERROR, false,
+				"[HttpRequestMethodNotSupportedException Response] - Exception: " + ex.getRootCause().getMessage(),
+				HttpStatus.INTERNAL_SERVER_ERROR);
+		return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	@ExceptionHandler(Exception.class)
+	protected ResponseEntity<Object> handleException(Exception ex) {
+		log.error(ex.getMessage(), ex);
+		result = new GenericResponseDTO(ERROR, false,
+				"[Exception Response] - Exception: " + ex.getMessage(),
+				HttpStatus.INTERNAL_SERVER_ERROR);
+		return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
 	
 	private Map<String, List<FieldErrorDTO>> getErrorsMap(List<FieldError> fields) {
 		Map<String, List<FieldErrorDTO>> errorResponse = new HashMap<>();

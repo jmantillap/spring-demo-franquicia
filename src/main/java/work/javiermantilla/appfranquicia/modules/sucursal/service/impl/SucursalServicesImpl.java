@@ -59,4 +59,14 @@ public class SucursalServicesImpl implements SucursalServices {
 		return GenericMapper.map(sucursal, SucursalDTO.class);
 	}
 
+	@Override
+	public SucursalEntity getSucursalById(Integer id) {
+		Optional<SucursalEntity> oSucursal = this.sucursalRepository.findById(id);
+		if(!oSucursal.isPresent()) {
+			log.error("La sucursal con id: {}, no existe.",id);
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"La Sucursal no existe");
+		}
+		return oSucursal.get();
+	}
+
 }
