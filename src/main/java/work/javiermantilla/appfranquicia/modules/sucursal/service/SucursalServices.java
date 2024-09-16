@@ -12,4 +12,6 @@ public interface SucursalServices {
 	List<SucursalDTO> getSucursales();
 	SucursalDTO updateSucursal(Integer id,SucursalUpdateDTO dto);
 	SucursalEntity getSucursalById(Integer id);
+	List<SucursalEntity> getSucursalesByIdFranquicia(Integer idFranquicia);
+	
 }

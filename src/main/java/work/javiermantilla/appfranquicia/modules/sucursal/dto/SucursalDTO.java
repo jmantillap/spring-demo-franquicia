@@ -29,5 +29,11 @@ public class SucursalDTO implements Serializable {
 	private String nombre;
 	@Null
 	private FranquiciaDTO franquicia;
+	public SucursalDTO(@Null Integer id, @Size(min = 2, max = 45) String nombre) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+	}
+
 	
 }

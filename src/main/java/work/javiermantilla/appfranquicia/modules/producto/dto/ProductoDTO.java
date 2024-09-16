@@ -33,4 +33,11 @@ public class ProductoDTO implements Serializable {
 	@NotNull
 	@Positive
 	private Integer stock;
+	public ProductoDTO(String nombre, Integer stock) {
+		super();
+		this.nombre = nombre;
+		this.stock = stock;
+	}
+	
+	
 }

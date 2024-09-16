@@ -19,6 +19,7 @@ import lombok.extern.log4j.Log4j2;
 import work.javiermantilla.appfranquicia.basicos.dto.GenericResponseDTO;
 import work.javiermantilla.appfranquicia.basicos.utils.FranquiciaConstants;
 import work.javiermantilla.appfranquicia.modules.producto.dto.ProductoDTO;
+import work.javiermantilla.appfranquicia.modules.producto.dto.ProductoStockDTO;
 import work.javiermantilla.appfranquicia.modules.producto.dto.ProductoUpdateDTO;
 import work.javiermantilla.appfranquicia.modules.producto.service.ProductoServices;
 
@@ -84,6 +85,33 @@ public class ProductoController {
 				FranquiciaConstants.TITTLE_DELETE);
 		return new ResponseEntity<>(genericResponse, HttpStatus.NO_CONTENT);
 	}
-
+	
+	@PatchMapping(value="/update-stock/{id}")
+	public ResponseEntity<Object> actualizarStock(@Valid @PathVariable Integer id
+			,@Valid @RequestBody  ProductoStockDTO productoStockDTO) {
+		
+		log.info("Se actualiza el stock del producto");
+		genericResponse = new GenericResponseDTO(
+				this.productoServices.updateStock(id,productoStockDTO), 
+				true,
+				FranquiciaConstants.RESPONSE_UPDATE, 
+				HttpStatus.OK, 
+				FranquiciaConstants.TITTLE_UPDATE);
+		return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+	}
+	
+	
+	@GetMapping(value = "/stock-max/{idFranquicia}")
+	public ResponseEntity<Object> getProductos(@Valid @PathVariable Integer idFranquicia) {
+		log.info("Consulta de lista de productos con más stock en la sucursal "
+				+ "perteneciente a la franquicia id: {} ",idFranquicia);
+		genericResponse = new GenericResponseDTO(
+				this.productoServices.getProductos(), 
+				true,
+				FranquiciaConstants.RESPONSE_FIND, 
+				HttpStatus.OK, 
+				FranquiciaConstants.TITTLE_FIND);
+		return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+	}
 	
 }

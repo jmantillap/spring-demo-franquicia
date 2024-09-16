@@ -69,4 +69,9 @@ public class SucursalServicesImpl implements SucursalServices {
 		return oSucursal.get();
 	}
 
+	@Override
+	public List<SucursalEntity> getSucursalesByIdFranquicia(Integer idFranquicia) {
+		return this.sucursalRepository.findByIdFranquicia(idFranquicia);
+	}
+
 }
