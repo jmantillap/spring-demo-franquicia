@@ -11,6 +11,8 @@ COPY target/demo-franquicia-1.0.jar /app/app.jar
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 
 
-#$ docker build fondo-app:v1 .
-#$ docker run -it --name fondo-contenedor-app -p 8080:8080 fondo-app:v1
-#$ docker run -it --rm --name fondo-contenedor-app -p 8080:8080 fondo-app:v1
+#$ docker build jmantillap/franquicia-app:v1 .
+#$ docker run -it --name franquicia-contenedor-app -p 8080:8080 <identificadorImagen>
+
+#creacion del contenedor y que lo elimine cuando se detenga el contenedor
+#$ docker run -it --rm --name franquicia-contenedor-app -p 8080:8080 <identificadorImagen>
