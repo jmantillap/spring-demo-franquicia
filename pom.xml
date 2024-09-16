@@ -115,14 +115,18 @@
 				<configuration>
 					<excludes>
 						<exclude>
-							work/javiermantilla/fondo/SpringDemoFranquiciaApplication.class</exclude>
-						<!--<exclude>**/entity/*</exclude>
+							work/javiermantilla/appfranquicia/SpringDemoFranquiciaApplication.class</exclude>
+						<exclude>**/entity/*</exclude>
 						<exclude>**/dto/**</exclude>
 						<exclude>**/exception/*</exclude>
 						<exclude>**/security/*</exclude>
-						<exclude>**/util/*</exclude>
+						<exclude>**/utils/*</exclude>
 						<exclude>**/validators/*</exclude>
-						<exclude>**/config/*</exclude>-->
+						<exclude>**/config/*</exclude>
+						<exclude>**/modules/producto/**</exclude>
+						<exclude>**/modules/reportes/**</exclude>
+						<exclude>**/modules/sucursal/**</exclude>
+						<exclude>**/basicos/*</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

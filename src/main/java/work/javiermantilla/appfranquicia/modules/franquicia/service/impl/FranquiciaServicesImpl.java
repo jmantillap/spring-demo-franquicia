@@ -58,7 +58,7 @@ public class FranquiciaServicesImpl implements FranquiciaServices {
 	public FranquiciaEntity getFranquiciaById(Integer id) {
 		Optional<FranquiciaEntity> oFranquicia = this.franquiciaRepository.findById(id);
 		if(!oFranquicia.isPresent()) {
-			log.error("El cliente con id: {}, no existe.",id);
+			log.error("La franquicia con id: {}, no existe.",id);
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"La Franquicia no existe");
 		}
 		return oFranquicia.get();

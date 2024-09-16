@@ -16,11 +16,11 @@ public interface ProductoRepository extends JpaRepository<ProductoEntity, Intege
 	 @Query(
 	            value = "SELECT s.id as idSucursal,s.nombre,p.id as idProducto,p.nombre,p.stock "
 	            		+ "FROM sucursal s "
-	            		+ "	INNER JOIN producto p ON (p.id_sucursal= s.id) "
+	            		+ "INNER JOIN producto p ON (p.id_sucursal= s.id) "
 	            		+ "WHERE s.id = :idSucursal "
 	            		+ "AND p.stock= (SELECT max(p2.stock) "
-	            		+ "			  FROM sucursal s2  "
-	            		+ "				   INNER JOIN producto p2 ON (p2.id_sucursal = s2.id ) "
+	            		+ "FROM sucursal s2  "
+	            		+ "INNER JOIN producto p2 ON (p2.id_sucursal = s2.id ) "
 	            		+ "              WHERE s2.id= :idSucursal ) ",
 	            nativeQuery = true
 	    )
