@@ -1,6 +1,6 @@
 ## DOCUMENTACION PROYECTO PRUEBA TECNICA
 
-Manejo de Franquicias, sucursales, productos.
+Manejo de Franquicias, sucursales, productos para prueba técnica.
 
 ## Modelo ER
  
