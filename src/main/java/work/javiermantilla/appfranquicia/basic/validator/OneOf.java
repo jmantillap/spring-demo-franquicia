@@ -1,4 +1,4 @@
-package work.javiermantilla.appfranquicia.basicos.validators;
+package work.javiermantilla.appfranquicia.basic.validator;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.PARAMETER;

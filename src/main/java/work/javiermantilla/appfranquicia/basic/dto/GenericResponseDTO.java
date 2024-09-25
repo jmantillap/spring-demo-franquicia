@@ -1,11 +1,11 @@
-package work.javiermantilla.appfranquicia.basicos.dto;
+package work.javiermantilla.appfranquicia.basic.dto;
 
 import org.springframework.http.HttpStatus;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import work.javiermantilla.appfranquicia.basicos.utils.FranquiciaConstants;
+import work.javiermantilla.appfranquicia.basic.util.FranquiciaConstants;
 
 @Data
 @AllArgsConstructor

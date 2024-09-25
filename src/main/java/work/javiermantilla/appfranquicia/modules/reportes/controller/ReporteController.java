@@ -11,9 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import work.javiermantilla.appfranquicia.basicos.dto.GenericResponseDTO;
-import work.javiermantilla.appfranquicia.basicos.utils.FranquiciaConstants;
-
+import work.javiermantilla.appfranquicia.basic.dto.GenericResponseDTO;
+import work.javiermantilla.appfranquicia.basic.util.FranquiciaConstants;
 import work.javiermantilla.appfranquicia.modules.reportes.services.ReporteServices;
 
 @RestController

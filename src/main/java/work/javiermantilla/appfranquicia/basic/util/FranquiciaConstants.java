@@ -1,4 +1,4 @@
-package work.javiermantilla.appfranquicia.basicos.utils;
+package work.javiermantilla.appfranquicia.basic.util;
 
 public class FranquiciaConstants {
 	public static final String[] URLS_ADMITIDAS ={ 

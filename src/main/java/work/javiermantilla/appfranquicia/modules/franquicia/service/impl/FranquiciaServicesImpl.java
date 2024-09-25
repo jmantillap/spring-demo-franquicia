@@ -9,7 +9,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import work.javiermantilla.appfranquicia.basicos.utils.GenericMapper;
+import work.javiermantilla.appfranquicia.basic.util.GenericMapper;
 import work.javiermantilla.appfranquicia.modules.franquicia.dto.FranquiciaDTO;
 import work.javiermantilla.appfranquicia.modules.franquicia.dto.FranquiciaUpdateDTO;
 import work.javiermantilla.appfranquicia.modules.franquicia.entity.FranquiciaEntity;

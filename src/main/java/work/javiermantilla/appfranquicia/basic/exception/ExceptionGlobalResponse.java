@@ -1,4 +1,4 @@
-package work.javiermantilla.appfranquicia.basicos.exception;
+package work.javiermantilla.appfranquicia.basic.exception;
 
 import java.util.HashMap;
 import java.util.List;
@@ -18,8 +18,8 @@ import org.springframework.web.server.ResponseStatusException;
 
 import jakarta.validation.ValidationException;
 import lombok.extern.log4j.Log4j2;
-import work.javiermantilla.appfranquicia.basicos.dto.GenericResponseDTO;
-import work.javiermantilla.appfranquicia.basicos.utils.FranquiciaConstants;
+import work.javiermantilla.appfranquicia.basic.dto.GenericResponseDTO;
+import work.javiermantilla.appfranquicia.basic.util.FranquiciaConstants;
 
 @ControllerAdvice
 @Log4j2

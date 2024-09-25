@@ -1,4 +1,4 @@
-package work.javiermantilla.appfranquicia.basicos.validators;
+package work.javiermantilla.appfranquicia.basic.validator;
 
 import java.util.Arrays;
 import java.util.List;

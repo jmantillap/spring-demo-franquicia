@@ -1,4 +1,4 @@
-package work.javiermantilla.appfranquicia.basicos.exception;
+package work.javiermantilla.appfranquicia.basic.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

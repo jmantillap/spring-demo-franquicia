@@ -1,4 +1,4 @@
-package work.javiermantilla.appfranquicia.basicos.utils;
+package work.javiermantilla.appfranquicia.basic.util;
 
 import java.io.IOException;
 import java.util.Base64;
